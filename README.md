@@ -1,2 +1,140 @@
-# IoT-Temp-Humidity-Monitor
-ESP32 system programmed with ESP-IDF to read temperature and humidity sensors and publish data via Mosquitto MQTT. Telegraf collects the data and stores it in InfluxDB, while Grafana visualizes real-time metrics and enables local network users to control the system through an interactive dashboard.
+# IoT Temperature & Humidity Monitoring System  
+ESP32 (ESP-IDF) + Mosquitto MQTT + Telegraf + InfluxDB + Grafana  
+
+This project implements a full end-to-end IoT monitoring and control system.  
+The ESP32 programmed with **ESP-IDF** collects temperature & humidity data and publishes it to **Mosquitto MQTT Broker**.  
+**Telegraf** receives the data and stores it inside **InfluxDB**, and **Grafana** visualizes everything on a real-time dashboard.  
+
+The dashboard also includes interactive control elements that allow authorized users on the same network to control the system remotely.
+
+---
+
+## 🔥 Features
+- ESP32 programmed using **ESP-IDF**
+- Reads temperature & humidity sensors (DHT/SHT/etc.)
+- Publishes data through **MQTT (Mosquitto Broker)**
+- **Telegraf** for automatic data ingestion → InfluxDB
+- **Grafana Dashboard** for real-time visualization & historical graphing
+- Control switches/buttons accessible from the local network
+- Access control so only allowed users can operate the system
+
+---
+
+## 🧱 System Architecture 
+┌───────────┐ MQTT ┌──────────────┐ Inputs ┌───────────┐
+│ ESP32 │ ─────────────→ │ Mosquitto │ ───────────────→ │ Telegraf │
+│ (ESP-IDF) │ Publish │ Broker │ Subscriber └─────┬─────┘
+└─────┬──────┘ └──────┬───────┘ │
+│ Sensor Data │ MQTT Topics │ Writes
+│          ▼
+│ ┌────────────────┐ ┌───────────────┐
+└──────────────────────────→ │ InfluxDB │ ←──── │ Grafana │
+│ Time-Series DB │ Query │ Visualization │
+└────────────────┘ └───────────────┘
+
+---
+
+## 🔄 System Flow Diagram
+
+
+[Sensors]
+│
+▼
+[ESP32 (ESP-IDF)]
+│ Reads data + formats JSON
+▼
+[MQTT Publish → Mosquitto Broker]
+│
+▼
+[Telegraf MQTT Consumer]
+│ Extracts fields
+▼
+[InfluxDB Bucket]
+│ Query
+▼
+[Grafana Dashboard]
+│
+├── Displays gauges, charts, logs
+└── Provides control buttons/switches
+│
+▼
+[MQTT Control Topics]
+│
+▼
+[ESP32 Takes Action]
+
+
+---
+
+## 📊 Dashboard Mockups (ASCII Visualization)
+
+### 1) **Overview Dashboard**
+
+
+┌─────────────────────────────────────────────┐
+│ SYSTEM DASHBOARD │
+├─────────────────────┬───────────────────────┤
+│ Temperature Gauge │ Humidity Gauge │
+│ ( °C ) │ ( % ) │
+│ ███████ 29°C │ ██████ 45% │
+├─────────────────────┴───────────────────────┤
+│ Real-Time Graph (Temp/Hum vs Time) │
+│ ● ● ● ● ● ● ● ● ● ● ● ● ● ● │
+│ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ │
+├─────────────────────────────────────────────┤
+│ System Control Panel │
+│ [●] System Power ON/OFF │
+│ [●] Fan Control │
+│ [●] Threshold Alarm Enable │
+└─────────────────────────────────────────────┘
+
+---
+
+---
+
+### 3) **Control Dashboard Layout**
+┌───────────────────────────────┐
+│ CONTROL DASHBOARD │
+├───────────────────────────────┤
+│ SYSTEM STATUS: RUNNING │
+├───────────────────────────────┤
+│ [Toggle] System ON/OFF │
+│ [Toggle] Relay Control │
+│ [Toggle] Alarm Mode │
+└───────────────────────────────┘
+### 2) **InfluxDB Data Preview Screen**
+
+---
+
+## 🛠 Technologies Used
+- **ESP32 (ESP-IDF)**
+- **Mosquitto MQTT Broker**
+- **Telegraf**
+- **InfluxDB**
+- **Grafana**
+
+---
+
+## 📦 Folder Structure
+/esp32-firmware → ESP-IDF source code
+/telegraf → Telegraf config files
+/grafana → Dashboard JSON exports
+/influxdb → DB setup scripts
+/docs → diagrams & documentation
+
+---
+
+## 🚀 How to Run
+1. Flash ESP32 firmware (ESP-IDF)  
+2. Run Mosquitto broker  
+3. Start Telegraf service  
+4. Start InfluxDB  
+5. Open Grafana and import dashboard  
+
+---
+
+## 📸 Dashboard Screenshots (Ready to Generate)
+
+
+
+
