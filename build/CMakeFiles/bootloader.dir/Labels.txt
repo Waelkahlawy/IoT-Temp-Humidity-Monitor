@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/courses/AIOT Course/Projects/EnviroSense/build/CMakeFiles/bootloader
+D:/courses/AIOT Course/Projects/EnviroSense/build/CMakeFiles/bootloader.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/CMakeFiles/bootloader-complete.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/courses/AIOT Course/Projects/EnviroSense/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
