@@ -32,6 +32,8 @@ static const char *TAG = "mqtt";     // Logging tag name
             payload[event->data_len] = '\0';
             ESP_LOGI(TAG, "📩 %s => %s", topic, payload);     // Log received message
 
+
+            /* for test only - ignore this part
             // If LED topic message received
             if (strcmp(topic, LED_TOPIC) == 0) {
                 bool new_state = led_state; // Default: no change
@@ -51,8 +53,11 @@ static const char *TAG = "mqtt";     // Logging tag name
                     esp_mqtt_client_publish(client, LED_TOPIC, led_state ? "ON" : "OFF", 0, 1, true);
                     ESP_LOGI(TAG, "LED state updated to: %s", led_state ? "ON" : "OFF");
                 }
-                // If same state, do nothing → prevents MQTT feedback loop
+              // If same state, do nothing → prevents MQTT feedback loop
+            
             }
+              */ 
+
             break;
         }
 
