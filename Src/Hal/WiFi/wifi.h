@@ -15,9 +15,9 @@
 #include "esp_rom_sys.h"            // For microsecond delay (esp_rom_delay_us)
 
 
- void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+ void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data); // Wi-Fi event handler
 
- void wifi_init_sta(void);
+ void wifi_init_sta(void); // Function to initialize Wi-Fi in station mode
                              
 
 

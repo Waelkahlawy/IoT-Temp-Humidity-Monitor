@@ -1,5 +1,5 @@
-#ifndef CFG_H
-#define CFG_H
+#ifndef CFG_H // Src/Cfg.h
+#define CFG_H   // Include guard
 
 
 // ====== Wi-Fi and MQTT configuration ======
@@ -19,4 +19,4 @@
 
 
 
-#endif
+#endif // End of Src/Cfg.h

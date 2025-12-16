@@ -70,7 +70,6 @@ static const char *TAG = "mqtt";     // Logging tag name
     }
 }
 
-// ====== Initialize Wi-Fi in station mode ======
 
 // ====== Start MQTT client ======
 void mqtt_app_start(void)

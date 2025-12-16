@@ -1,7 +1,7 @@
-#include "../Src/App/EnviroSense/envirosense.h"
-#include "../Src/Cfg.h"
-#include "../Src/Hal/WiFi/wifi.h"
-#include "../Src/Hal/MQTT/mqtt.h"
+#include "../Src/App/EnviroSense/envirosense.h" // Include EnviroSense header
+#include "../Src/Cfg.h"  // Include configuration header
+#include "../Src/Hal/WiFi/wifi.h" // Include Wi-Fi header
+#include "../Src/Hal/MQTT/mqtt.h" // Include MQTT header
 #include <stdio.h>                  // Standard input/output functions
 #include <string.h>                 // For string handling (memcpy, strcmp, etc.)
 #include <freertos/FreeRTOS.h>      // FreeRTOS base definitions
@@ -27,7 +27,7 @@ void app_main(void)
        */
 
     // Create task for DHT11 readings
-    xTaskCreate(dht11_mqtt_task, "dht11_mqtt_task", 4096, NULL, 5, NULL);
+    xTaskCreate(dht11_mqtt_task, "dht11_mqtt_task", 4096, NULL, 5, NULL); // Task for reading DHT11 sensor and publishing via MQTT
 
 	
 }

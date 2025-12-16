@@ -15,8 +15,8 @@
 #include <esp_timer.h>              // High-resolution timer
 #include "esp_rom_sys.h"            // For microsecond delay (esp_rom_delay_us)
 
- void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data);
- void mqtt_app_start(void);
+ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data); // MQTT event handler
+ void mqtt_app_start(void);   // Function to initialize and start MQTT client
 
 
 #endif

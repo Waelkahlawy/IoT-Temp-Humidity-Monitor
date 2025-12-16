@@ -11,7 +11,7 @@
 #include "esp_rom_sys.h"            // For microsecond delay (esp_rom_delay_us)
 
 
-esp_err_t dht11_read(uint8_t *temperature, uint8_t *humidity);
+esp_err_t dht11_read(uint8_t *temperature, uint8_t *humidity); // Function to read temperature and humidity from DHT11 sensor
 
 
 
