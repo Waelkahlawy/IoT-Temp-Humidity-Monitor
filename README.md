@@ -134,6 +134,7 @@ The dashboard also includes interactive control elements that allow authorized u
 ---
 
 ## 📸 Dashboard Screenshots (Ready to Generate)
+<img width="1861" height="914" alt="Screenshot 2025-12-16 182636" src="https://github.com/user-attachments/assets/22e4c5ef-8678-4c16-a3ba-f32e068e3699" />
 
 <img width="1456" height="867" alt="Screenshot 2025-12-16 144104" src="https://github.com/user-attachments/assets/95f5d5e7-03c2-4ee0-92c5-89a166806fbe" />
 
