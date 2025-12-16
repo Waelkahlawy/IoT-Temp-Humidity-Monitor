@@ -1,10 +1,10 @@
-#include "envirosense.h"
+#include "envirosense.h" // Include EnviroSense header
 
-#include "../../Cfg.h"
-#include "../../Hal/DHT11/dht.h"
-#include "../../Hal/MQTT/mqtt.h"
-#include "../../Hal/WiFi/wifi.h"
-#include <mqtt_client.h>            
+#include "../../Cfg.h"   // Include configuration header
+#include "../../Hal/DHT11/dht.h"     // Include DHT11 header
+#include "../../Hal/MQTT/mqtt.h"    // Include MQTT header
+#include "../../Hal/WiFi/wifi.h"   // Include Wi-Fi header
+#include <mqtt_client.h>    // MQTT client        
 
 extern esp_mqtt_client_handle_t mqtt_client ;  // MQTT client handle
 
